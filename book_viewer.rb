@@ -6,6 +6,10 @@ before do
   @contents = File.readlines("data/toc.txt")
 end
 
+not_found do
+  redirect "/"
+end
+
 get "/" do
   @title = "The Adventures of Sherlock Holmes"
 
